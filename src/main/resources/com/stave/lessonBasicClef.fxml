@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="content.com.stave.controllers.lessons.LessonBasicClefController">
+   <center>
+      <AnchorPane prefHeight="650.0" prefWidth="660.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="230.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clefs" wrappingWidth="125.515625">
+               <font>
+                  <Font name="System Bold Italic" size="52.0" />
+               </font>
+            </Text>
+            <Pane fx:id="referencePane" layoutX="13.0" layoutY="83.0" prefHeight="200.0" prefWidth="502.0">
+               <children>
+                  <ImageView fx:id="trebleView" fitHeight="102.0" fitWidth="397.0" layoutX="65.0" layoutY="29.0">
+                     <image>
+                        <Image url="@../../Images/Treble-Clef-with-Note.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="385.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When we combine the notes we learned from the previous lesson, we can complete all the ntoes on the Treble Clef." wrappingWidth="166.984375" />
+                  <Text layoutX="6.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Treble Clef, you can tell by the Symbol at the start of the Staff." wrappingWidth="135.826171875" />
+                  <Button fx:id="bassClefButton" layoutX="241.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#setBassClefPaneVisible" text="Next" />
+               </children>
+            </Pane>
+            <Pane fx:id="lessonBassClefPane" layoutX="21.0" layoutY="242.0" prefHeight="167.0" prefWidth="561.0" visible="false">
+               <children>
+                  <ImageView fx:id="bassView" fitHeight="102.0" fitWidth="410.0" layoutX="55.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../../Images/Bass-Clef-with-Note.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Bass Clef, it means the following lines and spaces will be played in Bass Clef " wrappingWidth="141.578125" />
+                  <Text layoutX="387.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes in Bass Clef have different musical pitches than Treble Clef so you will find different notes on the lines and spaces from those in Treble Clef." wrappingWidth="186.529296875" />
+                  <Button fx:id="combinedClefButton" layoutX="234.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#setCombinedClefPaneVisible" text="Next" />
+               </children>
+            </Pane>
+            <Pane fx:id="lessonCombinedClefPane" layoutX="14.0" layoutY="402.0" prefHeight="200.0" prefWidth="558.0" visible="false">
+               <children>
+                  <ImageView fx:id="combinedView" fitHeight="162.0" fitWidth="371.0" layoutX="84.0">
+                     <image>
+                        <Image url="@../../Images/double-clef.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="9.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Although Treble and Bass are different Staffs, they are connected to one another in the above manner." />
+               </children>
+            </Pane>
+            <Pane fx:id="lessonPaneFinal" layoutX="22.0" layoutY="590.0" prefHeight="47.0" prefWidth="540.0" visible="false">
+               <children>
+                  <Text layoutX="240.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Well done! " wrappingWidth="60.689453125" />
+                  <Text layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You now know about Treble and Bass clef, there are more clefs to learn but this is just an introduction." />
+                  <Button fx:id="finishButton" mnemonicParsing="false" onMouseClicked="#finish" prefHeight="31.0" prefWidth="59.0" text="Finish" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

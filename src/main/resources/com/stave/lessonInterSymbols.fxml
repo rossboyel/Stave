@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bpLesson" prefHeight="650.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="content.com.stave.controllers.lessons.LessonInterSymbolController">
+   <center>
+      <AnchorPane fx:id="apLesson" prefHeight="650.0" prefWidth="660.0">
+         <children>
+            <BorderPane layoutX="6.0" prefHeight="650.0" prefWidth="660.0">
+               <top>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Symbols" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="52.0" />
+                     </font>
+                  </Text>
+               </top>
+            </BorderPane>
+            <Button fx:id="finishButton" layoutX="296.0" layoutY="462.0" mnemonicParsing="false" onMouseClicked="#finish" text="Finish" />
+            <Pane fx:id="referencePane" layoutX="58.0" layoutY="179.0" opacity="0.15" prefHeight="262.0" prefWidth="533.0" style="-fx-background-color: blue;" visible="false" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bpLesson" prefHeight="650.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="content.com.stave.controllers.lessons.LessonBasicSymbolController">
+   <center>
+      <AnchorPane fx:id="apLesson" prefHeight="650.0" prefWidth="660.0">
+         <children>
+            <BorderPane prefHeight="650.0" prefWidth="610.0">
+               <bottom>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="660.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text layoutX="147.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Symbols" wrappingWidth="346.515625">
+                           <font>
+                              <Font name="System Bold Italic" size="52.0" />
+                           </font></Text>
+                        <Pane fx:id="lessonPaneFace" layoutX="320.0" layoutY="121.0" prefHeight="134.0" prefWidth="312.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="68.0" fitWidth="302.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Face-notes-on-staff-1.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="14.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In the same way that words can be written on paper, musical notes can be written on a Staff." wrappingWidth="298.4921875" />
+                              <Button fx:id="lessonButtonTwo" layoutX="136.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#setSymbolVisible" text="Next" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="lessonSymbolFirstPane" layoutX="19.0" layoutY="83.0" prefHeight="177.0" prefWidth="263.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="27.0" fitWidth="245.0" layoutX="11.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/staff2.gif" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="28.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is called a Staff - a set of lines and spaces that represent a musical pitch." wrappingWidth="207.4921875" />
+                              <Button fx:id="lessonButtonOne" layoutX="107.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#setFaceVisible" text="Next" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="lessonPaneSymbol" layoutX="9.0" layoutY="349.0" prefHeight="195.0" prefWidth="283.0" style="-fx-background-color: white;" visible="false">
+                           <children>
+                              <Text layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You may have noticed the new symbol at the start of the Staff." wrappingWidth="142.4921875" />
+                              <Text layoutX="14.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is called a Treble Clef" wrappingWidth="127.755859375" />
+                              <ImageView fitHeight="130.0" fitWidth="66.0" layoutX="190.0" layoutY="8.0">
+                                 <image>
+                                    <Image url="@../../Images/treble_clef.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="lessonButtonThree" layoutX="121.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#setLinesVisible" text="Next" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="lessonPaneLine" layoutX="320.0" layoutY="325.0" prefHeight="227.0" prefWidth="320.0" style="-fx-background-color: white;" visible="false">
+                           <children>
+                              <ImageView fitHeight="172.0" fitWidth="386.0" layoutX="-66.0" layoutY="-12.0">
+                                 <image>
+                                    <Image url="@../../Images/Treble-Clef-with-Note.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="lessonButtonFour" layoutX="139.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#setLessonFinalVisible" text="Next" />
+                              <Text layoutX="30.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remember the notes - FACE for space and Every Good Boy Deserves Fudge for lines." wrappingWidth="285.998046875" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="lessonPaneFinal" layoutX="90.0" layoutY="560.0" prefHeight="87.0" prefWidth="521.0" visible="false">
+                           <children>
+                              <Text layoutX="21.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You now know what Staffs, Notes and Treble Cleffs look like.">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="158.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Well done! " wrappingWidth="155.71923828125">
+                                 <font>
+                                    <Font name="System Bold" size="29.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="finishButton" mnemonicParsing="false" onMouseClicked="#finish" prefHeight="24.0" prefWidth="59.0" text="Finish" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </bottom>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,32 @@
+.parent{
+    -fx-background-color:#fcfcfc;
+}
+.sidebar{
+    -fx-background-color: #DC267F;
+}
+.sidebar-btn{
+    -fx-background-color:transparent;
+}
+.icon525{
+    -fx-fill: #FFB000;
+}
+.button{
+    -fx-background-color: transparent;
+}
+
+.sidebar-btn:hover{
+    -fx-border-color: #edd4c7;
+    -fx-border-width: 0px 0px 0px 2px;
+}
+.pane-brder{
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: #CC6677;
+}
+.pane-unavailable {
+-fx-background-color: yellow;
+}
+
+.pane-available {
+    -fx-background-color: green;
+}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bpQuiz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="content.com.stave.controllers.quizzes.QuizBasicSymbolController">
+   <right>
+      <AnchorPane prefHeight="650.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="38.0" layoutY="159.0" opacity="0.15" prefHeight="262.0" prefWidth="533.0" style="-fx-background-color: blue;" />
+            <Pane fx:id="firstPane" layoutX="111.0" layoutY="241.0">
+               <children>
+                  <Text layoutX="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is this symbol called?" />
+                  <ImageView fitHeight="36.0" fitWidth="259.0" layoutY="59.94921875" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/staff2.gif" />
+                     </image>
+                  </ImageView>
+                  <RadioButton fx:id="firstCorrectAnswer" layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="Staff">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgStaff" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="Stave" toggleGroup="$tgStaff" />
+                  <RadioButton layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="Crotchet" toggleGroup="$tgStaff" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="Treble Staff" toggleGroup="$tgStaff" />
+                  <Button layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#firstQuestion" text="Enter" />
+               </children>
+            </Pane>
+            <Text layoutX="117.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Symbol Quiz">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Text>
+            <Label layoutX="306.0" layoutY="500.0" prefHeight="82.0" prefWidth="63.0" text="/7">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label fx:id="correctAnswerCountLabel" layoutX="281.0" layoutY="500.0" prefHeight="82.0" prefWidth="36.0" text="0">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Pane fx:id="secondPane" layoutX="111.0" layoutY="241.0" visible="false">
+               <children>
+                  <Text layoutX="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is this symbol called?" />
+                  <ImageView fitHeight="146.0" fitWidth="108.0" layoutX="122.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/treble_clef.jpg" />
+                     </image>
+                  </ImageView>
+                  <RadioButton layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="Semi-Rest">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgSymbol" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="Legato" toggleGroup="$tgSymbol" />
+                  <RadioButton fx:id="secondCorrectAnswer" layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="Treble Staff" toggleGroup="$tgSymbol" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="Tenor" toggleGroup="$tgSymbol" />
+                  <Button layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#secondQuestion" text="Enter" />
+               </children>
+            </Pane>
+            <Pane fx:id="thirdPane" layoutX="111.0" layoutY="241.0" visible="false">
+               <children>
+                  <Text layoutX="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is this symbol called?" />
+                  <ImageView fitHeight="92.0" fitWidth="118.0" layoutX="96.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Rest.png" />
+                     </image>
+                  </ImageView>
+                  <RadioButton layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="Note">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgRest" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="Clef" toggleGroup="$tgRest" />
+                  <RadioButton fx:id="thirdCorrectAnswer" layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="Rest" toggleGroup="$tgRest" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="Alto" toggleGroup="$tgRest" />
+                  <Button layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#thirdQuestion" text="Enter" />
+               </children>
+            </Pane>
+            <Pane fx:id="fourthPane" layoutX="111.0" layoutY="241.0" visible="false">
+               <children>
+                  <Text layoutX="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What are the notes of the spaces?" />
+                  <ImageView fx:id="fourthCorrectAnswer" fitHeight="65.0" fitWidth="260.0" layoutX="-1.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Face-notes-on-staff-1.png" />
+                     </image>
+                  </ImageView>
+                  <RadioButton layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="FEAT">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgNote" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="PACE" toggleGroup="$tgNote" />
+                  <RadioButton fx:id="fourthCorrectAnswer" layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="FACE" toggleGroup="$tgNote" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="BACE" toggleGroup="$tgNote" />
+                  <Button layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#fourthQuestion" text="Enter" />
+               </children>
+            </Pane>
+            <Pane fx:id="fifthPane" layoutX="111.0" layoutY="241.0" visible="false">
+               <children>
+                  <Text layoutX="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What clef is this?" />
+                  <ImageView fitHeight="96.0" fitWidth="303.0" layoutX="78.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Alto-Clef-F.jpg" />
+                     </image>
+                  </ImageView>
+                  <RadioButton layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="Treble">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgClef" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fifthCorrectAnswer" layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="Bass" toggleGroup="$tgClef" />
+                  <RadioButton layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="Tenor" toggleGroup="$tgClef" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="Alto" toggleGroup="$tgClef" />
+                  <Button layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#fifthQuestion" text="Enter" />
+               </children>
+            </Pane>
+            <Pane fx:id="sixthPane" layoutX="111.0" layoutY="241.0" visible="false">
+               <children>
+                  <Text layoutX="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is the beat value of this rest symbol?" />
+                  <RadioButton fx:id="sixthCorrectAnswer" layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgRestValue" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="2" toggleGroup="$tgRestValue" />
+                  <RadioButton layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="3" toggleGroup="$tgRestValue" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="4" toggleGroup="$tgRestValue" />
+                  <Button layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#sixthQuestion" text="Enter" />
+                  <ImageView fitHeight="96.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true" x="50.0" y="50.0">
+                     <image>
+                        <Image url="@../../Images/Rest.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="seventhPane" layoutX="111.0" layoutY="241.0" onMouseClicked="#lastQuestion" visible="false">
+               <children>
+                  <Text layoutX="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What are the notes of the lines?" />
+                  <ImageView fitHeight="99.0" fitWidth="334.0" layoutX="-44.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Treble-Clef-with-Note.png" />
+                     </image>
+                  </ImageView>
+                  <RadioButton fx:id="seventhCorrectAnswer" layoutX="309.0" layoutY="0.94921875" mnemonicParsing="false" selected="true" text="EGBDF">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tgLineNotes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton layoutX="309.0" layoutY="30.94921875" mnemonicParsing="false" text="ABCDE" toggleGroup="$tgLineNotes" />
+                  <RadioButton layoutX="309.0" layoutY="60.94921875" mnemonicParsing="false" text="IDKMA" toggleGroup="$tgLineNotes" />
+                  <RadioButton layoutX="309.0" layoutY="90.94921875" mnemonicParsing="false" text="GBADE" toggleGroup="$tgLineNotes" />
+                  <Button fx:id="seventhEnterButton" layoutX="309.0" layoutY="137.94921875" mnemonicParsing="false" onMouseClicked="#lastQuestion" text="Enter" />
+                  <Button fx:id="finishButton" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#finishQuiz" text="Finish" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

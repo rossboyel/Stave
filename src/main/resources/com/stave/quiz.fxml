@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bpQuiz" prefHeight="650.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="content.com.stave.controllers.quizzes.QuizController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="610.0" style="-fx-background-color: white;" styleClass="parent">
+         <children>
+            <Text layoutX="247.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz" wrappingWidth="116.0">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click on an unlocked (green coloured) box to begin." wrappingWidth="582.67578125">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You will unlock any locked quizzes when you complete each block of quizzes." wrappingWidth="582.67578125">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <Pane prefHeight="650.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="beginVBox" prefHeight="216.666666667" prefWidth="280.0" style="-fx-background-color: green;">
+               <children>
+                  <Pane onMouseClicked="#quizBasicSymbol" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                     <children>
+                        <Circle fx:id="basicSymbolCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Symbols" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#quizBasicClef" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="basicClefCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Clefs" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="basicTimeSignaturesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="24.0" onMouseClicked="#quizBasicTimeSignatures" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Time Signaturtes" textOrigin="BOTTOM" wrappingWidth="181.494140625" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizBasicNotes" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                     <children>
+                        <Circle fx:id="basicNotesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Notes" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#quizBasicRests" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="basicRestsCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Rests" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizBasicScales" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="basicScalesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Scales" textOrigin="BOTTOM" wrappingWidth="73.083984375" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="interVBox" layoutY="217.0" prefHeight="216.666666667" prefWidth="280.0" style="-fx-background-color: yellow;">
+               <children>
+                  <Pane onMouseClicked="#quizInterSymbol" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                     <children>
+                        <Circle fx:id="interSymbolCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="24.0" onMouseClicked="#quizInterSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Symbols" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#quizInterClef" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="interClefCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Clefs" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizInterTimeSignatures" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="interTimeSignaturesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Time Signaturtes" textOrigin="BOTTOM" wrappingWidth="170.431640625" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizInterNotes" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                     <children>
+                        <Circle fx:id="interNotesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Notes" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#quizInterRests" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Rests" textOrigin="BOTTOM" y="1.0" />
+                        <Circle fx:id="interRestsCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizInterScales" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="interScalesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermediate Scales" textOrigin="BOTTOM" wrappingWidth="142.06640625" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="expertVBox" layoutY="434.0" prefHeight="215.0" prefWidth="280.0" style="-fx-background-color: red;">
+               <children>
+                  <Pane onMouseClicked="#quizExpertSymbol" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                     <children>
+                        <Circle fx:id="expertSymbolCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Symbols" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#quizExpertClef" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="expertClefCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Clefs" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizExpertTimeSignatures" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="expertTimeSignaturesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Time Signaturtes" textOrigin="BOTTOM" wrappingWidth="137.048828125" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizExpertNotes" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                     <children>
+                        <Circle fx:id="expertNotesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Notes" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#quizExpertRests" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="expertRestsCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Rests" textOrigin="BOTTOM" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+                  <Pane onMouseClicked="#quizExpertScales" prefHeight="110.0" prefWidth="280.0" stylesheets="@Style.css">
+                     <children>
+                        <Circle fx:id="expertScalesCircle" fill="WHITE" layoutX="45.0" layoutY="17.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text boundsType="VISUAL" layoutX="100.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expert Scales" textOrigin="BOTTOM" wrappingWidth="71.126953125" y="1.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebar-btn" />
+                        <String fx:value="pane-brder" />
+                     </styleClass>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
